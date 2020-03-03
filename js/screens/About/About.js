@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, SafeAreaView, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+  SectionList,
+} from 'react-native';
 import styles from './styles';
 
 const About = () => {

@@ -1,12 +1,12 @@
-import About from './About';
+import Map from './Map';
 import React, {Component} from 'react';
 import {View, Text, SafeAreaView} from 'react-native';
 
-export default class AboutContainer extends Component {
+export default class MapContainer extends Component {
   constructor(props) {
     super(props);
   }
   render() {
-    return <About />;
+    return <Map />;
   }
 }
