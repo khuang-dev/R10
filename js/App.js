@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
+import About from '../js/screens/About';
 export default class App extends Component {
   render() {
     return (
-      <View>
-        <Text>Welcome to React Native!</Text>
-      </View>
+      <SafeAreaView>
+        <View>
+          <About />
+        </View>
+      </SafeAreaView>
     );
   }
 }
