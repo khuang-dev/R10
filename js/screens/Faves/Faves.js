@@ -12,7 +12,9 @@ import styles from './styles';
 const Faves = () => {
   return (
     <SafeAreaView>
-      <Text style={styles.pageTitle}>Faves</Text>
+      <Text style={styles.emptyStateText}>
+        You haven't faved any sessions yet.
+      </Text>
     </SafeAreaView>
   );
 };

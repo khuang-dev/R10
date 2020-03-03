@@ -13,8 +13,26 @@ const ScheduleStack = createStackNavigator();
 const ScheduleStackScreens = props => {
   return (
     <ScheduleStack.Navigator initialRouteName="Schedule">
-      <ScheduleStack.Screen name="Schedule" component={ScheduleScreen} />
-      <ScheduleStack.Screen name="Session" component={SessionScreen} />
+      <ScheduleStack.Screen
+        name="Schedule"
+        component={ScheduleScreen}
+        options={{
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#9963ea',
+          },
+        }}
+      />
+      <ScheduleStack.Screen
+        name="Session"
+        component={SessionScreen}
+        options={{
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#9963ea',
+          },
+        }}
+      />
     </ScheduleStack.Navigator>
   );
 };
@@ -22,7 +40,16 @@ const MapStack = createStackNavigator();
 const MapStackScreens = props => {
   return (
     <MapStack.Navigator initialRouteName="Map">
-      <MapStack.Screen name="Map" component={MapScreen} />
+      <MapStack.Screen
+        name="Map"
+        component={MapScreen}
+        options={{
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#9963ea',
+          },
+        }}
+      />
     </MapStack.Navigator>
   );
 };
@@ -31,8 +58,26 @@ const FavesStack = createStackNavigator();
 const FavesStackScreens = props => {
   return (
     <FavesStack.Navigator initialRouteName="Faves">
-      <FavesStack.Screen name="Faves" component={FavesScreen} />
-      <FavesStack.Screen name="Session" component={SessionScreen} />
+      <FavesStack.Screen
+        name="Faves"
+        component={FavesScreen}
+        options={{
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#9963ea',
+          },
+        }}
+      />
+      <FavesStack.Screen
+        name="Session"
+        component={SessionScreen}
+        options={{
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#9963ea',
+          },
+        }}
+      />
     </FavesStack.Navigator>
   );
 };
@@ -41,7 +86,16 @@ const AboutStack = createStackNavigator();
 const AboutStackScreens = props => {
   return (
     <AboutStack.Navigator initialRouteName="About">
-      <AboutStack.Screen name="About" component={AboutScreen} />
+      <AboutStack.Screen
+        name="About"
+        component={AboutScreen}
+        options={{
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#9963ea',
+          },
+        }}
+      />
     </AboutStack.Navigator>
   );
 };
