@@ -5,12 +5,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   header: {
-    fontSize: 30,
+    fontSize: 20,
   },
   logo: {
-    width: 150,
-    height: 150,
+    width: '95%',
+    height: 45,
     alignSelf: 'center',
+    borderBottomWidth: 1,
+    borderColor: '#e6e6e6',
+    marginTop: 10,
+    paddingBottom: 20,
   },
 });
 

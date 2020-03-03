@@ -12,7 +12,6 @@ import styles from './styles';
 const About = () => {
   return (
     <SafeAreaView>
-      <Text style={styles.pageTitle}>About</Text>
       <Image
         style={styles.logo}
         resizeMode={'contain'}
