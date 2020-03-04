@@ -7,6 +7,6 @@ export default class SpeakerContainer extends Component {
     super(props);
   }
   render() {
-    return <Speaker />;
+    return <Speaker speaker={this.props.route.params.speaker} />;
   }
 }
