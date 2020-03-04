@@ -15,7 +15,6 @@ import {formatSessionData} from './helper/FormatSessionData';
 
 const Schedule = ({navigation, sessions}) => {
   const newSessions = formatSessionData(sessions);
-  console.log(sessions);
   return (
     <View>
       <SectionList
@@ -27,11 +26,10 @@ const Schedule = ({navigation, sessions}) => {
               <TouchableOpacity
                 onPress={() =>
                   navigation.navigate('Session', {
-                    id: item.id,
+                    session: item,
                   })
                 }>
                 <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.title}>{item.id}</Text>
                 <Text style={styles.location}>{item.location}</Text>
               </TouchableOpacity>
             </View>

@@ -11,8 +11,11 @@ const SCHEDULE = gql`
       location
       startTime
       title
+      description
       speaker {
         id
+        name
+        image
       }
     }
   }
