@@ -4,17 +4,14 @@ export const createFave = faveId => {
   try {
     return AsyncStorage.setItem(
       `${faveId}`,
-      JSON.stringify({id: faveId, fave_on: new Date()}),
+      JSON.stringify({id: faveId, faved_on: new Date()}),
     );
   } catch (e) {
     return false;
   }
 };
 export const deleteFave = faveId => {
-  return AsyncStorage.removeItem(
-    `${faveId}`,
-    JSON.stringify({id: faveId, fave_on: new Date()}),
-  );
+  return AsyncStorage.removeItem(`${faveId}`);
 };
 export const queryFaves = async () => {
   const key = await AsyncStorage.getAllKeys();

@@ -26,7 +26,7 @@ class FavesProvider extends Component {
   };
   addFaveSession = async sessionId => {
     try {
-      await createFave(sessionId);
+      const newFav = await createFave(sessionId);
       if (newFav) {
         this.setState({faveIds: [...this.state.faveIds, newFav.id]});
       }

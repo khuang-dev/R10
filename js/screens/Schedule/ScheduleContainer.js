@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {View, Text, SafeAreaView} from 'react-native';
 import {Query} from '@apollo/react-components';
 import {gql} from 'apollo-boost';
+import {FavesContext} from '../../context/FavesContext';
 
 const SCHEDULE = gql`
   {
@@ -34,10 +35,15 @@ export default class ScheduleContainer extends Component {
           if (error) return <Text>Error :(</Text>;
           if (data)
             return (
-              <Schedule
-                navigation={this.props.navigation}
-                sessions={data.allSessions}
-              />
+              <FavesContext.Consumer>
+                {({faveIds, addFaveSession, removeFaveSession}) => (
+                  <Schedule
+                    faveIds={faveIds}
+                    navigation={this.props.navigation}
+                    sessions={data.allSessions}
+                  />
+                )}
+              </FavesContext.Consumer>
             );
         }}
       </Query>

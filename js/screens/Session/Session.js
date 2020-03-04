@@ -10,8 +10,16 @@ import {
 } from 'react-native';
 import styles from './styles';
 import moment from 'moment';
+// import {addFaveSession} from '../../context/FavesContext';
 
-const Session = ({session, navigation}) => {
+const Session = ({
+  faveIds,
+  addFaveSession,
+  removeFaveSession,
+  session,
+  navigation,
+}) => {
+  console.log(faveIds);
   return (
     <View>
       <Text style={styles.location}>{session.location}</Text>
@@ -38,8 +46,13 @@ const Session = ({session, navigation}) => {
         </TouchableOpacity>
       </View>
 
-      <TouchableOpacity onPress={() => navigation.navigate('Speaker')}>
-        <Text style={{borderWidth: 1, borderColor: 'black'}}>
+      <TouchableOpacity onPress={() => addFaveSession(session.id)}>
+        <Text style={{borderWidth: 1, borderColor: 'black', width: 90}}>
+          Add to Faves
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => removeFaveSession(session.id)}>
+        <Text style={{borderWidth: 1, borderColor: 'black', width: 130}}>
           Remove from Faves
         </Text>
       </TouchableOpacity>
