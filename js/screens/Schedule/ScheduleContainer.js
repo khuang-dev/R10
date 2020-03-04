@@ -11,6 +11,9 @@ const SCHEDULE = gql`
       location
       startTime
       title
+      speaker {
+        id
+      }
     }
   }
 `;

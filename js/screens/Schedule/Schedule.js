@@ -15,6 +15,7 @@ import {formatSessionData} from './helper/FormatSessionData';
 
 const Schedule = ({navigation, sessions}) => {
   const newSessions = formatSessionData(sessions);
+  console.log(sessions);
   return (
     <View>
       <SectionList
@@ -23,8 +24,16 @@ const Schedule = ({navigation, sessions}) => {
         renderItem={({item}) => {
           return (
             <View style={styles.sessionContainer}>
-              <Text style={styles.title}>{item.title}</Text>
-              <Text style={styles.location}>{item.location}</Text>
+              <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate('Session', {
+                    id: item.id,
+                  })
+                }>
+                <Text style={styles.title}>{item.title}</Text>
+                <Text style={styles.title}>{item.id}</Text>
+                <Text style={styles.location}>{item.location}</Text>
+              </TouchableOpacity>
             </View>
           );
         }}
@@ -32,17 +41,6 @@ const Schedule = ({navigation, sessions}) => {
           <Text style={styles.startTime}>{moment(title).format('LT')}</Text>
         )}
       />
-
-      <TouchableOpacity onPress={() => navigation.navigate('Session')}>
-        <Text style={{borderWidth: 1, borderColor: 'black'}}>
-          Go to Session
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Speaker')}>
-        <Text style={{borderWidth: 1, borderColor: 'black'}}>
-          Go to Speaker Modal
-        </Text>
-      </TouchableOpacity>
     </View>
   );
 };

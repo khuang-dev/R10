@@ -6,14 +6,21 @@ import {
   StyleSheet,
   Image,
   SectionList,
+  TouchableOpacity,
 } from 'react-native';
 import styles from './styles';
 
-const Session = () => {
+const Session = ({id, navigation, sessions}) => {
+  console.log(id);
   return (
-    <SafeAreaView>
-      <Text style={styles.pageTitle}>Session</Text>
-    </SafeAreaView>
+    <View>
+      <Text>Hello</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('Speaker')}>
+        <Text style={{borderWidth: 1, borderColor: 'black'}}>
+          Go to Speaker Modal
+        </Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
