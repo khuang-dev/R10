@@ -11,23 +11,30 @@ import {
 import styles from './styles';
 import moment from 'moment';
 
-const Session = ({route, navigation}) => {
-  const {session} = route.params;
+const Session = ({session, navigation}) => {
   return (
     <View>
-      <Text>{session.location}</Text>
-      <Text>{session.title}</Text>
-      <Text>{moment(session.startTime).format('LT')}</Text>
-      <Text>{session.description}</Text>
-      <View>
-        <Text>Presented by:</Text>
+      <Text style={styles.location}>{session.location}</Text>
+      <Text style={styles.title}>{session.title}</Text>
+      <Text style={styles.startTime}>
+        {moment(session.startTime).format('LT')}
+      </Text>
+      <Text style={styles.description}>{session.description}</Text>
+      <Text style={styles.presentedBy}>Presented by:</Text>
+
+      <View style={styles.speakerContainer}>
         <Image
-          style={{height: 100, width: 100}}
+          style={styles.image}
           resizeMode={'contain'}
           source={{uri: session.speaker.image}}
         />
-        <TouchableOpacity onPress={() => navigation.navigate('Speaker')}>
-          <Text>{session.speaker.name}</Text>
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate('Speaker', {
+              speaker: session.speaker,
+            })
+          }>
+          <Text style={styles.speaker}>{session.speaker.name}</Text>
         </TouchableOpacity>
       </View>
 
