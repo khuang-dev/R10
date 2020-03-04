@@ -8,12 +8,14 @@ import {
   SectionList,
 } from 'react-native';
 import styles from './styles';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Speaker = ({speaker}) => {
   return (
     <View>
       <SafeAreaView style={{backgroundColor: 'black'}}></SafeAreaView>
       <View style={{backgroundColor: 'black', height: '100%'}}>
+        <MaterialCommunityIcons name="close" style={styles.icon} />
         <Text style={styles.header}>About the Speaker</Text>
         <View style={styles.speakerContainer}>
           <View style={styles.imageContainer}>

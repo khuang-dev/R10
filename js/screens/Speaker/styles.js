@@ -4,7 +4,6 @@ const styles = StyleSheet.create({
   header: {
     alignSelf: 'center',
     color: 'white',
-    marginTop: 30,
     marginBottom: 60,
   },
   speaker: {
@@ -31,6 +30,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     width: '95%',
     alignSelf: 'center',
+  },
+  icon: {
+    marginLeft: 10,
+    fontSize: 25,
+    color: 'white',
   },
 });
 
