@@ -16,6 +16,7 @@ const SCHEDULE = gql`
         id
         name
         image
+        bio
       }
     }
   }
