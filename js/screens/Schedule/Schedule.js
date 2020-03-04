@@ -15,8 +15,6 @@ import {formatSessionData} from './helper/FormatSessionData';
 
 const Schedule = ({navigation, sessions}) => {
   const newSessions = formatSessionData(sessions);
-  // console.log(newSessions);
-  let startTime = moment(sessions.startTime).format('LT');
   return (
     <View>
       <SectionList
@@ -24,18 +22,17 @@ const Schedule = ({navigation, sessions}) => {
         keyExtractor={newSessions => newSessions.id}
         renderItem={({item}) => {
           return (
-            <View>
-              <Text>{item.title}</Text>
-              <Text>{item.location}</Text>
+            <View style={styles.sessionContainer}>
+              <Text style={styles.title}>{item.title}</Text>
+              <Text style={styles.location}>{item.location}</Text>
             </View>
           );
         }}
         renderSectionHeader={({section: {title}}) => (
-          <Text>{moment(title).format('LT')}</Text>
+          <Text style={styles.startTime}>{moment(title).format('LT')}</Text>
         )}
       />
 
-      <Text style={{alignSelf: 'center'}}>Schedule</Text>
       <TouchableOpacity onPress={() => navigation.navigate('Session')}>
         <Text style={{borderWidth: 1, borderColor: 'black'}}>
           Go to Session
