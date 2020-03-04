@@ -17,7 +17,7 @@ export const deleteFave = faveId => {
   );
 };
 export const queryFaves = async () => {
-  const keys = await AsyncStorage.getAllKeys();
+  const key = await AsyncStorage.getAllKeys();
   const allStores = await AsyncStorage.multiGet(key);
   return allStores.filter(store => store[1].includes('faved_on'));
 };
