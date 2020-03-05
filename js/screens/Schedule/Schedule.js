@@ -27,9 +27,11 @@ const Schedule = ({faveIds, navigation, sessions}) => {
             <View style={styles.sessionContainer}>
               <TouchableOpacity
                 onPress={() =>
-                  navigation.navigate('Session', {
-                    session: item,
-                  })
+                  item.speaker !== null
+                    ? navigation.navigate('Session', {
+                        session: item,
+                      })
+                    : null
                 }>
                 <Text style={styles.title}>{item.title}</Text>
                 <View style={styles.locationContainer}>
