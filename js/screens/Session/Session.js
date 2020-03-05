@@ -19,9 +19,10 @@ const Session = ({
   removeFaveSession,
   session,
   navigation,
+  speaker,
 }) => {
-  console.log(faveIds);
-  console.log(session.id);
+  // console.log(faveIds);
+  // console.log(session.id);
   return (
     <View>
       <View style={styles.locationContainer}>
@@ -40,15 +41,15 @@ const Session = ({
         <Image
           style={styles.image}
           resizeMode={'contain'}
-          source={{uri: session.speaker.image}}
+          source={{uri: speaker.image}}
         />
         <TouchableOpacity
           onPress={() =>
             navigation.navigate('Speaker', {
-              speaker: session.speaker,
+              speaker: speaker,
             })
           }>
-          <Text style={styles.speaker}>{session.speaker.name}</Text>
+          <Text style={styles.speaker}>{speaker.name}</Text>
         </TouchableOpacity>
       </View>
       {faveIds.includes(session.id) ? (

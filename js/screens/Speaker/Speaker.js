@@ -11,6 +11,7 @@ import styles from './styles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Speaker = ({speaker}) => {
+  console.log(speaker);
   return (
     <View>
       <SafeAreaView style={{backgroundColor: 'black'}}></SafeAreaView>

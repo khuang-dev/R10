@@ -15,9 +15,6 @@ const SCHEDULE = gql`
       description
       speaker {
         id
-        name
-        image
-        bio
       }
     }
   }

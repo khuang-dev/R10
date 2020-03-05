@@ -15,8 +15,8 @@ import {formatSessionData} from './helper/FormatSessionData';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Schedule = ({faveIds, navigation, sessions}) => {
-  console.log(faveIds);
-  console.log(sessions);
+  // console.log(faveIds);
+  // console.log(sessions);
   const newSessions = formatSessionData(sessions);
   return (
     <View>
