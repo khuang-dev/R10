@@ -31,16 +31,14 @@ const About = ({conducts}) => {
       </Text>
       <Text style={styles.header}>Code of Conduct</Text>
 
-      <FlatList
-        data={conducts}
-        renderItem={({item}) => (
-          <View>
-            <Text>{item.title}</Text>
-            <Text>{item.description}</Text>
+      {conducts.map(conduct => {
+        return (
+          <View key={conduct.id}>
+            <Text>{conduct.title}</Text>
+            <Text>{conduct.description}</Text>
           </View>
-        )}
-        keyExtractor={item => item.id}
-      />
+        );
+      })}
 
       <View style={styles.copyrightContainer}>
         <Text>© RED Academy 2020</Text>
