@@ -12,6 +12,7 @@ const SPEAKER = gql`
       bio
       image
       name
+      url
     }
   }
 `;

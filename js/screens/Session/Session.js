@@ -22,7 +22,7 @@ const Session = ({
   speaker,
 }) => {
   // console.log(faveIds);
-  // console.log(session.id);
+  console.log(session);
   return (
     <View>
       <View style={styles.locationContainer}>
