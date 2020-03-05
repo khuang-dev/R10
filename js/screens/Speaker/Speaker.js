@@ -8,18 +8,22 @@ import {
   SectionList,
   TouchableOpacity,
   Linking,
+  Modal,
 } from 'react-native';
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Speaker = ({speaker}) => {
+const Speaker = ({speaker, navigation}) => {
   console.log(speaker);
+
   return (
     <View>
       <SafeAreaView style={{backgroundColor: 'black'}}></SafeAreaView>
       <View style={{backgroundColor: 'black', height: '100%'}}>
-        <MaterialCommunityIcons name="close" style={styles.icon} />
+        <TouchableOpacity onPress={() => navigation.goBack('Session')}>
+          <MaterialCommunityIcons name="close" style={styles.icon} />
+        </TouchableOpacity>
         <Text style={styles.header}>About the Speaker</Text>
         <View style={styles.speakerContainer}>
           <View style={styles.imageContainer}>
