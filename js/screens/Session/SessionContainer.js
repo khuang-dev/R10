@@ -4,6 +4,7 @@ import {View, Text, SafeAreaView} from 'react-native';
 import {Query} from '@apollo/react-components';
 import {gql} from 'apollo-boost';
 import {FavesContext} from '../../context/FavesContext';
+import Loader from '../../components/Loader';
 
 const SPEAKER = gql`
   query($id: ID!) {
@@ -28,7 +29,7 @@ export default class SessionContainer extends Component {
         query={SPEAKER}
         variables={{id: this.props.route.params.session.speaker.id}}>
         {({loading, error, data}) => {
-          if (loading) return <Text>Loading...</Text>;
+          if (loading) return <Loader />;
           if (error) return <Text>Error :(</Text>;
           if (data) console.log(data);
           return (
