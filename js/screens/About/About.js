@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   View,
-  Text,
   ScrollView,
   StyleSheet,
   Image,
@@ -9,6 +8,7 @@ import {
   FlatList,
 } from 'react-native';
 import styles from './styles';
+import Text from '../../lib/styles';
 
 const About = ({conducts}) => {
   console.log(conducts);

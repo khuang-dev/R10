@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   View,
-  Text,
   SafeAreaView,
   StyleSheet,
   ScrollView,
@@ -13,6 +12,7 @@ import styles from './styles';
 import moment from 'moment';
 import {formatSessionData} from './helper/FormatSessionData';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Text from '../../lib/styles';
 
 const Schedule = ({faveIds, navigation, sessions}) => {
   console.log(sessions);

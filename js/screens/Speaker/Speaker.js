@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   View,
-  Text,
   SafeAreaView,
   StyleSheet,
   Image,
@@ -13,6 +12,7 @@ import {
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Text from '../../lib/styles';
 
 const Speaker = ({speaker, navigation}) => {
   console.log(speaker);
