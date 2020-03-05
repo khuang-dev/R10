@@ -34,8 +34,8 @@ const About = ({conducts}) => {
       {conducts.map(conduct => {
         return (
           <View key={conduct.id}>
-            <Text>{conduct.title}</Text>
-            <Text>{conduct.description}</Text>
+            <Text style={styles.conductTitle}>{conduct.title}</Text>
+            <Text style={styles.description}>{conduct.description}</Text>
           </View>
         );
       })}

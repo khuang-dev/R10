@@ -10,6 +10,8 @@ const styles = StyleSheet.create({
   },
   description: {
     margin: 10,
+    fontWeight: '200',
+    lineHeight: 20,
   },
   copyrightContainer: {
     margin: 10,
@@ -30,6 +32,10 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     borderBottomWidth: 1,
     borderColor: '#e6e6e6',
+  },
+  conductTitle: {
+    color: '#9963ea',
+    margin: 10,
   },
 });
 

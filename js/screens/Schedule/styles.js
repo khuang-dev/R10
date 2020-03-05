@@ -4,6 +4,8 @@ const styles = StyleSheet.create({
   startTime: {
     backgroundColor: '#e6e6e6',
     marginLeft: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
   },
   location: {
     color: '#999999',
@@ -15,8 +17,8 @@ const styles = StyleSheet.create({
   sessionContainer: {
     borderBottomWidth: 1,
     borderBottomColor: '#e6e6e6',
-    paddingTop: 10,
-    paddingBottom: 5,
+    paddingTop: 12,
+    paddingBottom: 8,
   },
   locationContainer: {
     flexDirection: 'row',

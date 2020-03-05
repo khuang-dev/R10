@@ -16,8 +16,12 @@ const styles = StyleSheet.create({
   },
   description: {
     margin: 15,
+    fontSize: 17,
+    fontWeight: '200',
+    lineHeight: 25,
   },
   presentedBy: {
+    marginTop: 10,
     marginLeft: 15,
     color: '#999999',
   },
@@ -25,6 +29,7 @@ const styles = StyleSheet.create({
     color: 'black',
     marginTop: 15,
     marginLeft: 10,
+    fontSize: 15,
   },
   speakerContainer: {
     flexDirection: 'row',

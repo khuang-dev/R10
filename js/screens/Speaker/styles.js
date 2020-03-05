@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: 'white',
     marginBottom: 60,
+    fontSize: 15,
   },
   speaker: {
     marginLeft: 10,
@@ -14,6 +15,9 @@ const styles = StyleSheet.create({
   bio: {
     color: 'black',
     margin: 15,
+    fontWeight: '200',
+    fontSize: 15,
+    lineHeight: 25,
   },
   image: {
     width: 100,
@@ -43,6 +47,7 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingRight: 20,
     paddingLeft: 20,
+    fontSize: 15,
   },
   buttonContainer: {
     alignSelf: 'center',
