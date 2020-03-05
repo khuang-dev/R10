@@ -2,16 +2,18 @@ import React from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
+  ScrollView,
   StyleSheet,
   Image,
   SectionList,
+  FlatList,
 } from 'react-native';
 import styles from './styles';
 
-const About = () => {
+const About = ({conducts}) => {
+  console.log(conducts);
   return (
-    <SafeAreaView>
+    <ScrollView>
       <View style={styles.logoContainer}>
         <Image
           style={styles.logo}
@@ -28,10 +30,22 @@ const About = () => {
         Vancouver, BC.
       </Text>
       <Text style={styles.header}>Code of Conduct</Text>
+
+      <FlatList
+        data={conducts}
+        renderItem={({item}) => (
+          <View>
+            <Text>{item.title}</Text>
+            <Text>{item.description}</Text>
+          </View>
+        )}
+        keyExtractor={item => item.id}
+      />
+
       <View style={styles.copyrightContainer}>
         <Text>© RED Academy 2020</Text>
       </View>
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 
