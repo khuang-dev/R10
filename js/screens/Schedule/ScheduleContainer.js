@@ -36,7 +36,7 @@ export default class ScheduleContainer extends Component {
           if (data)
             return (
               <FavesContext.Consumer>
-                {({faveIds, addFaveSession, removeFaveSession}) => (
+                {({faveIds}) => (
                   <Schedule
                     faveIds={faveIds}
                     navigation={this.props.navigation}

@@ -12,8 +12,11 @@ import {
 import styles from './styles';
 import moment from 'moment';
 import {formatSessionData} from './helper/FormatSessionData';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Schedule = ({navigation, sessions}) => {
+const Schedule = ({faveIds, navigation, sessions}) => {
+  console.log(faveIds);
+  console.log(sessions);
   const newSessions = formatSessionData(sessions);
   return (
     <View>
@@ -30,7 +33,12 @@ const Schedule = ({navigation, sessions}) => {
                   })
                 }>
                 <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.location}>{item.location}</Text>
+                <View style={styles.locationContainer}>
+                  <Text style={styles.location}>{item.location}</Text>
+                  {faveIds.includes(item.id) ? (
+                    <MaterialCommunityIcons style={styles.icon} name="heart" />
+                  ) : null}
+                </View>
               </TouchableOpacity>
             </View>
           );

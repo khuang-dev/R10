@@ -9,8 +9,6 @@ const styles = StyleSheet.create({
   location: {
     color: '#999999',
     lineHeight: 30,
-    marginLeft: 15,
-    marginTop: 10,
   },
   title: {
     marginLeft: 15,
@@ -39,6 +37,28 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 50,
+  },
+  button: {
+    alignSelf: 'center',
+    color: 'white',
+    paddingTop: 10,
+    paddingBottom: 10,
+    paddingRight: 20,
+    paddingLeft: 20,
+  },
+  buttonContainer: {
+    alignSelf: 'center',
+    marginTop: 5,
+  },
+  locationContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 15,
+  },
+  icon: {
+    marginTop: 5,
+    fontSize: 18,
+    color: '#cf392a',
   },
 });
 

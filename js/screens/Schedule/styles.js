@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
   location: {
     color: '#999999',
     lineHeight: 30,
-    marginLeft: 10,
   },
   title: {
     marginLeft: 10,
@@ -18,6 +17,17 @@ const styles = StyleSheet.create({
     borderBottomColor: '#e6e6e6',
     paddingTop: 10,
     paddingBottom: 5,
+  },
+  locationContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  icon: {
+    marginTop: 5,
+    fontSize: 18,
+    color: '#cf392a',
   },
 });
 
