@@ -13,6 +13,7 @@ import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Text from '../../lib/styles';
+import GradientButton from '../../components/GradientButton';
 
 const Speaker = ({speaker, navigation}) => {
   console.log(speaker);
@@ -35,22 +36,11 @@ const Speaker = ({speaker, navigation}) => {
           </View>
           <Text style={styles.speaker}>{speaker.name}</Text>
           <Text style={styles.bio}>{speaker.bio}</Text>
-          <TouchableOpacity
-            style={styles.buttonContainer}
+          <GradientButton
+            text="Read More on Wikipedia"
             onPress={() => {
               Linking.openURL(`${speaker.url}`);
-            }}>
-            <LinearGradient
-              colors={['#9963ea', '#8797D6']}
-              start={{x: 0.0, y: 1.0}}
-              end={{x: 1.0, y: 0.0}}
-              style={[
-                StyleSheet.absoluteFill,
-                {height: 'auto', width: 'auto', borderRadius: 50},
-              ]}
-            />
-            <Text style={styles.button}>Read More on Wikipedia</Text>
-          </TouchableOpacity>
+            }}></GradientButton>
         </View>
       </View>
     </View>
