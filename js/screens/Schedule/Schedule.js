@@ -10,9 +10,9 @@ import {
 } from 'react-native';
 import styles from './styles';
 import moment from 'moment';
-import {formatSessionData} from './helper/FormatSessionData';
+import {formatSessionData} from '../../lib/helper/FormatSessionData';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Text from '../../lib/styles';
+import Text from '../../lib/CustomText';
 
 const Schedule = ({faveIds, navigation, sessions}) => {
   console.log(sessions);

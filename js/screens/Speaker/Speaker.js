@@ -12,7 +12,7 @@ import {
 import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Text from '../../lib/styles';
+import Text from '../../lib/CustomText';
 import GradientButton from '../../components/GradientButton';
 
 const Speaker = ({speaker, navigation}) => {

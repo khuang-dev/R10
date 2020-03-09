@@ -7,6 +7,7 @@ import FavesScreen from '../screens/Faves';
 import AboutScreen from '../screens/About';
 import {sharedScreenOptions} from './config';
 import {createDrawerNavigator} from '@react-navigation/drawer';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 /* use push for profile */
 /* any navigation will have a prop like this.props.history/match (props.navigation) */
@@ -21,6 +22,9 @@ const ScheduleStackScreens = props => {
         component={ScheduleScreen}
         options={{
           headerTintColor: 'white',
+          headerTitleStyle: {
+            fontFamily: 'Montserrat-Regular',
+          },
         }}
       />
       <ScheduleStack.Screen
@@ -28,6 +32,9 @@ const ScheduleStackScreens = props => {
         component={SessionScreen}
         options={{
           headerTintColor: 'white',
+          headerTitleStyle: {
+            fontFamily: 'Montserrat-Regular',
+          },
         }}
       />
     </ScheduleStack.Navigator>
@@ -44,6 +51,9 @@ const MapStackScreens = props => {
         component={MapScreen}
         options={{
           headerTintColor: 'white',
+          headerTitleStyle: {
+            fontFamily: 'Montserrat-Regular',
+          },
         }}
       />
     </MapStack.Navigator>
@@ -61,6 +71,9 @@ const FavesStackScreens = props => {
         component={FavesScreen}
         options={{
           headerTintColor: 'white',
+          headerTitleStyle: {
+            fontFamily: 'Montserrat-Regular',
+          },
         }}
       />
       <FavesStack.Screen
@@ -68,6 +81,9 @@ const FavesStackScreens = props => {
         component={SessionScreen}
         options={{
           headerTintColor: 'white',
+          headerTitleStyle: {
+            fontFamily: 'Montserrat-Regular',
+          },
         }}
       />
     </FavesStack.Navigator>
@@ -85,6 +101,9 @@ const AboutStackScreens = props => {
         component={AboutScreen}
         options={{
           headerTintColor: 'white',
+          headerTitleStyle: {
+            fontFamily: 'Montserrat-Regular',
+          },
         }}
       />
     </AboutStack.Navigator>
@@ -94,8 +113,31 @@ const AboutStackScreens = props => {
 const Drawer = createDrawerNavigator();
 
 const DrawerNav = props => (
-  <Drawer.Navigator>
-    <Drawer.Screen name="Scheule" component={ScheduleStackScreens} />
+  <Drawer.Navigator
+    drawerContentOptions={{
+      activeTintColor: '#9963ea',
+      labelStyle: {
+        fontFamily: 'Montserrat-Regular',
+      },
+    }}
+    screenOptions={({route}) => ({
+      drawerIcon: ({focused, size, color}) => {
+        let iconName;
+        if (route.name === 'Schedule') {
+          iconName = focused ? 'calendar-blank' : 'calendar-blank-outline';
+        } else if (route.name === 'Map') {
+          iconName = focused ? 'map' : 'map-outline';
+        } else if (route.name === 'Faves') {
+          iconName = focused ? 'heart' : 'heart-outline';
+        } else if (route.name === 'About') {
+          iconName = focused ? 'information' : 'information-outline';
+        }
+        return (
+          <MaterialCommunityIcons name={iconName} size={size} color={color} />
+        );
+      },
+    })}>
+    <Drawer.Screen name="Schedule" component={ScheduleStackScreens} />
     <Drawer.Screen name="Map" component={MapStackScreens} />
     <Drawer.Screen name="Faves" component={FavesStackScreens} />
     <Drawer.Screen name="About" component={AboutStackScreens} />

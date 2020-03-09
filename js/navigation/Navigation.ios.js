@@ -103,7 +103,7 @@ const BottomTabNavScreens = props => (
       },
       labelStyle: {
         fontSize: 10,
-        fontFamily: 'Montserrat',
+        fontFamily: 'Montserrat-Regular',
       },
     }}
     screenOptions={({route}) => ({
