@@ -8,7 +8,8 @@ import {
   FlatList,
 } from 'react-native';
 import styles from './styles';
-import Text from '../../lib/styles';
+import Text from '../../lib/CustomText';
+import Collapsible from '../../components/Collapsible';
 
 const About = ({conducts}) => {
   console.log(conducts);
@@ -33,15 +34,15 @@ const About = ({conducts}) => {
 
       {conducts.map(conduct => {
         return (
-          <View key={conduct.id}>
-            <Text style={styles.conductTitle}>{conduct.title}</Text>
-            <Text style={styles.description}>{conduct.description}</Text>
-          </View>
+          <Collapsible
+            key={conduct.id}
+            title={conduct.title}
+            description={conduct.description}></Collapsible>
         );
       })}
 
       <View style={styles.copyrightContainer}>
-        <Text>© RED Academy 2020</Text>
+        <Text style={styles.copyright}>© RED Academy 2020</Text>
       </View>
     </ScrollView>
   );

@@ -20,6 +20,9 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderColor: '#e6e6e6',
   },
+  copyright: {
+    fontWeight: '200',
+  },
   logo: {
     width: '95%',
     height: 45,
@@ -32,10 +35,6 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     borderBottomWidth: 1,
     borderColor: '#e6e6e6',
-  },
-  conductTitle: {
-    color: '#9963ea',
-    margin: 10,
   },
 });
 
