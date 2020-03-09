@@ -10,6 +10,7 @@ import styles from './styles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Text from '../../lib/CustomText';
 import GradientButton from '../../components/GradientButton';
+import PropTypes from 'prop-types';
 
 const Speaker = ({speaker, navigation}) => {
   return (
@@ -39,6 +40,10 @@ const Speaker = ({speaker, navigation}) => {
       </View>
     </View>
   );
+};
+Speaker.propTypes = {
+  speaker: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default Speaker;

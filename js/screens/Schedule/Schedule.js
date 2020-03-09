@@ -5,6 +5,7 @@ import moment from 'moment';
 import {formatSessionData} from '../../lib/helper/FormatSessionData';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Text from '../../lib/CustomText';
+import PropTypes from 'prop-types';
 
 const Schedule = ({faveIds, navigation, sessions}) => {
   const newSessions = formatSessionData(sessions);
@@ -41,6 +42,11 @@ const Schedule = ({faveIds, navigation, sessions}) => {
       />
     </View>
   );
+};
+Schedule.propTypes = {
+  faveIds: PropTypes.array.isRequired,
+  navigation: PropTypes.object.isRequired,
+  sessions: PropTypes.array.isRequired,
 };
 
 export default Schedule;

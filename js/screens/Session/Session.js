@@ -2,10 +2,10 @@ import React from 'react';
 import {View, Image, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import moment from 'moment';
-import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Text from '../../lib/CustomText';
 import GradientButton from '../../components/GradientButton';
+import PropTypes from 'prop-types';
 
 const Session = ({
   faveIds,
@@ -55,6 +55,14 @@ const Session = ({
       )}
     </View>
   );
+};
+Session.propTypes = {
+  faveIds: PropTypes.array.isRequired,
+  addFaveSession: PropTypes.func.isRequired,
+  removeFaveSession: PropTypes.func.isRequired,
+  session: PropTypes.object.isRequired,
+  navigation: PropTypes.object.isRequired,
+  speaker: PropTypes.object.isRequired,
 };
 
 export default Session;

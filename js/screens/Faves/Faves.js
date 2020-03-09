@@ -5,6 +5,7 @@ import moment from 'moment';
 import {formatSessionData} from '../../lib/helper/FormatSessionData';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Text from '../../lib/CustomText';
+import PropTypes from 'prop-types';
 
 const Faves = ({favedSessions, navigation}) => {
   const newSessions = formatSessionData(favedSessions);
@@ -50,6 +51,11 @@ const Faves = ({favedSessions, navigation}) => {
       )}
     </View>
   );
+};
+
+Faves.propTypes = {
+  favedSessions: PropTypes.array.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default Faves;

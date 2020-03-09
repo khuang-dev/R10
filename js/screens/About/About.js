@@ -3,6 +3,7 @@ import {View, ScrollView, Image} from 'react-native';
 import styles from './styles';
 import Text from '../../lib/CustomText';
 import Collapsible from '../../components/Collapsible';
+import PropTypes from 'prop-types';
 
 const About = ({conducts}) => {
   return (
@@ -38,6 +39,9 @@ const About = ({conducts}) => {
       </View>
     </ScrollView>
   );
+};
+About.propTypes = {
+  conducts: PropTypes.array.isRequired,
 };
 
 export default About;
