@@ -1,11 +1,13 @@
 import React from 'react';
 import Text from '../../lib/CustomText';
+import {View} from 'react-native';
+import styles from './styles';
 
 const Map = () => {
   return (
-    <Text style={{alignSelf: 'center'}}>
-      Maps is currently not supported on Android
-    </Text>
+    <View style={styles.androidContainer}>
+      <Text>Maps is currently not supported on Android</Text>
+    </View>
   );
 };
 

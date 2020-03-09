@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
+import {ActivityIndicator} from 'react-native';
+import styles from './styles';
 
 export default class Loader extends Component {
   render() {
@@ -8,11 +9,3 @@ export default class Loader extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  loader: {
-    flex: 1,
-    alignItems: 'center',
-    padding: 10,
-  },
-});

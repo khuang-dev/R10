@@ -1,6 +1,6 @@
 import Schedule from './Schedule';
 import React, {Component} from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
+import Text from 'react-native';
 import {Query} from '@apollo/react-components';
 import {gql} from 'apollo-boost';
 import {FavesContext} from '../../context/FavesContext';

@@ -18,6 +18,7 @@ const GradientHeader = props => (
 const MenuButton = ({navigation}) => {
   return (
     <MaterialCommunityIcons
+      style={{marginLeft: 10}}
       name="menu"
       color="white"
       size={25}

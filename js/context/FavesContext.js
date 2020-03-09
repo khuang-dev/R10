@@ -1,4 +1,4 @@
-import React, {Component, createFactory} from 'react';
+import React, {Component} from 'react';
 export const FavesContext = React.createContext();
 import {createFave, deleteFave, queryFaves} from '../config/models';
 

@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  SafeAreaView,
-  StyleSheet,
-  Image,
-  SectionList,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Image, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import moment from 'moment';
 import LinearGradient from 'react-native-linear-gradient';
@@ -22,8 +15,6 @@ const Session = ({
   navigation,
   speaker,
 }) => {
-  // console.log(faveIds);
-  console.log(session);
   return (
     <View>
       <View style={styles.locationContainer}>

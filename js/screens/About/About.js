@@ -1,18 +1,10 @@
 import React from 'react';
-import {
-  View,
-  ScrollView,
-  StyleSheet,
-  Image,
-  SectionList,
-  FlatList,
-} from 'react-native';
+import {View, ScrollView, Image} from 'react-native';
 import styles from './styles';
 import Text from '../../lib/CustomText';
 import Collapsible from '../../components/Collapsible';
 
 const About = ({conducts}) => {
-  console.log(conducts);
   return (
     <ScrollView>
       <View style={styles.logoContainer}>

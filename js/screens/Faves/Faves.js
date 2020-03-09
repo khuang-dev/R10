@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  SafeAreaView,
-  StyleSheet,
-  Image,
-  SectionList,
-  TouchableOpacity,
-} from 'react-native';
+import {View, SectionList, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import moment from 'moment';
 import {formatSessionData} from '../../lib/helper/FormatSessionData';

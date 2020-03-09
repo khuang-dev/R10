@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  View,
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  Image,
-  SectionList,
-  TouchableOpacity,
-} from 'react-native';
+import {View, SectionList, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import moment from 'moment';
 import {formatSessionData} from '../../lib/helper/FormatSessionData';
@@ -15,7 +7,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Text from '../../lib/CustomText';
 
 const Schedule = ({faveIds, navigation, sessions}) => {
-  console.log(sessions);
   const newSessions = formatSessionData(sessions);
   return (
     <View>

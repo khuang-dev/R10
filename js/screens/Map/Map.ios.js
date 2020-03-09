@@ -1,13 +1,4 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  Image,
-  SectionList,
-} from 'react-native';
-import styles from './styles';
 import MapView, {Marker} from 'react-native-maps';
 
 const Map = () => {

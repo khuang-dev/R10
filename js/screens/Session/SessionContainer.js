@@ -1,6 +1,6 @@
 import Session from './Session';
 import React, {Component} from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
+import Text from 'react-native';
 import {Query} from '@apollo/react-components';
 import {gql} from 'apollo-boost';
 import {FavesContext} from '../../context/FavesContext';
@@ -23,7 +23,6 @@ export default class SessionContainer extends Component {
     super(props);
   }
   render() {
-    console.log(this.props);
     return (
       <Query
         query={SPEAKER}
@@ -31,21 +30,21 @@ export default class SessionContainer extends Component {
         {({loading, error, data}) => {
           if (loading) return <Loader />;
           if (error) return <Text>Error :(</Text>;
-          if (data) console.log(data);
-          return (
-            <FavesContext.Consumer>
-              {({faveIds, addFaveSession, removeFaveSession}) => (
-                <Session
-                  faveIds={faveIds}
-                  addFaveSession={addFaveSession}
-                  removeFaveSession={removeFaveSession}
-                  session={this.props.route.params.session}
-                  navigation={this.props.navigation}
-                  speaker={data.Speaker}
-                />
-              )}
-            </FavesContext.Consumer>
-          );
+          if (data)
+            return (
+              <FavesContext.Consumer>
+                {({faveIds, addFaveSession, removeFaveSession}) => (
+                  <Session
+                    faveIds={faveIds}
+                    addFaveSession={addFaveSession}
+                    removeFaveSession={removeFaveSession}
+                    session={this.props.route.params.session}
+                    navigation={this.props.navigation}
+                    speaker={data.Speaker}
+                  />
+                )}
+              </FavesContext.Consumer>
+            );
         }}
       </Query>
     );

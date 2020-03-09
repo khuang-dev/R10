@@ -116,6 +116,7 @@ const DrawerNav = props => (
   <Drawer.Navigator
     drawerContentOptions={{
       activeTintColor: '#9963ea',
+      activeBackgroundColor: '#e6e6e6',
       labelStyle: {
         fontFamily: 'Montserrat-Regular',
       },
