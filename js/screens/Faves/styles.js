@@ -2,10 +2,13 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   emptyStateText: {
-    alignSelf: 'center',
-    marginTop: 350,
     fontWeight: '200',
     fontSize: 15,
+  },
+  emptyStateContainer: {
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   startTime: {
     backgroundColor: '#e6e6e6',

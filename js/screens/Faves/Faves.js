@@ -12,7 +12,7 @@ const Faves = ({favedSessions, navigation}) => {
   return (
     <View>
       {favedSessions.length === 0 ? (
-        <View>
+        <View style={styles.emptyStateContainer}>
           <Text style={styles.emptyStateText}>
             You haven't faved any sessions yet.
           </Text>

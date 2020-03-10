@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 
 const styles = StyleSheet.create({
   startTime: {
@@ -16,9 +16,17 @@ const styles = StyleSheet.create({
   },
   description: {
     margin: 15,
-    fontSize: 17,
     fontWeight: '200',
     lineHeight: 25,
+    ...Platform.select({
+      ios: {
+        fontSize: 17,
+      },
+      android: {
+        fontSize: 12,
+        fontFamily: 'Montserrat-Light',
+      },
+    }),
   },
   presentedBy: {
     marginTop: 10,
@@ -41,7 +49,14 @@ const styles = StyleSheet.create({
   image: {
     height: 50,
     width: 50,
-    borderRadius: 50,
+    ...Platform.select({
+      ios: {
+        borderRadius: 50,
+      },
+      android: {
+        borderRadius: 500,
+      },
+    }),
   },
   button: {
     alignSelf: 'center',

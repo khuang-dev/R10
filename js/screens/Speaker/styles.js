@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 
 const styles = StyleSheet.create({
   header: {
@@ -18,11 +18,24 @@ const styles = StyleSheet.create({
     fontWeight: '200',
     fontSize: 15,
     lineHeight: 25,
+    ...Platform.select({
+      android: {
+        fontFamily: 'Montserrat-Light',
+        fontSize: 12,
+      },
+    }),
   },
   image: {
     width: 100,
     height: 100,
-    borderRadius: 50,
+    ...Platform.select({
+      ios: {
+        borderRadius: 50,
+      },
+      android: {
+        borderRadius: 500,
+      },
+    }),
   },
   imageContainer: {
     alignSelf: 'center',
