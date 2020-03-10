@@ -38,25 +38,24 @@ const BackButton = ({navigation}) => {
     />
   );
 };
-export const sharedScreenOptions = props =>
-  console.log(props) || {
-    headerBackTitleVisible: false,
-    header: props => <GradientHeader {...props} />,
-    headerStyle: {
-      backgroundColor: 'transparent',
-    },
-    ...Platform.select({
-      android: {
-        headerLeft: () => {
-          return props.route.name === 'Session' ? (
-            <BackButton navigation={props.navigation} />
-          ) : (
-            <MenuButton navigation={props.navigation} />
-          );
-        },
+export const sharedScreenOptions = props => ({
+  headerBackTitleVisible: false,
+  header: props => <GradientHeader {...props} />,
+  headerStyle: {
+    backgroundColor: 'transparent',
+  },
+  ...Platform.select({
+    android: {
+      headerLeft: () => {
+        return props.route.name === 'Session' ? (
+          <BackButton navigation={props.navigation} />
+        ) : (
+          <MenuButton navigation={props.navigation} />
+        );
       },
-    }),
-  };
+    },
+  }),
+});
 export const sharedScreenOptions2 = props => ({
   headerBackTitleVisible: false,
   header: props => <GradientHeader {...props} />,
