@@ -3,6 +3,7 @@ import {StyleSheet, View, Platform} from 'react-native';
 import {Header} from '@react-navigation/stack';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {useNavigationState} from '@react-navigation/native';
 
 const GradientHeader = props => (
   <View style={{backgroundColor: 'white', overflow: 'hidden'}}>
@@ -26,7 +27,37 @@ const MenuButton = ({navigation}) => {
     />
   );
 };
-export const sharedScreenOptions = props => ({
+const BackButton = ({navigation}) => {
+  return (
+    <MaterialCommunityIcons
+      style={{marginLeft: 10}}
+      name="arrow-left"
+      color="white"
+      size={25}
+      onPress={() => navigation.goBack()}
+    />
+  );
+};
+export const sharedScreenOptions = props =>
+  console.log(props) || {
+    headerBackTitleVisible: false,
+    header: props => <GradientHeader {...props} />,
+    headerStyle: {
+      backgroundColor: 'transparent',
+    },
+    ...Platform.select({
+      android: {
+        headerLeft: () => {
+          return props.route.name === 'Session' ? (
+            <BackButton navigation={props.navigation} />
+          ) : (
+            <MenuButton navigation={props.navigation} />
+          );
+        },
+      },
+    }),
+  };
+export const sharedScreenOptions2 = props => ({
   headerBackTitleVisible: false,
   header: props => <GradientHeader {...props} />,
   headerStyle: {
@@ -34,7 +65,7 @@ export const sharedScreenOptions = props => ({
   },
   ...Platform.select({
     android: {
-      headerLeft: () => <MenuButton navigation={props.navigation} />,
+      headerLeft: () => null,
     },
   }),
 });
